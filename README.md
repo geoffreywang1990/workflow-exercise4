@@ -1,25 +1,20 @@
-3d.city
-=======
+# Exploring webhooks
 
-3d city builder [LAUNCH](http://lo-th.github.io/3d.city/index.html)<br>
+[Webhooks](https://developer.github.com/webhooks/) are GitHub's notification system for events that occur. This repo helps you explore how these are delivered. 
 
-The goal is create 3d city builder to test performance for webgl games<br>
-With minimum size impact and maximum speed.<br>
-(world.sea:161 ko, view.min.js:71 ko, city.3d.min.js:130 ko)<br>
-Webgl 3d side use [Three.js](https://github.com/mrdoob/three.js), 3d model use [Sea3d](https://github.com/sunag/sea3d) format.<br>
+### See it in action
 
-This game use simulation source micropolisJS by Graememcc<br>
-[https://github.com/graememcc/micropolisJS](https://github.com/graememcc/micropolisJS). Is a port of Micropolis to JS/HTML5.<br>
-Licensed under the GPLv3 with some additional terms please be mindful of these.<br>
+1. In this repository, generate some events by performing actions, like opening an issue for example.
+1. This repository is connected to this server: https://smee.io/DLKerAbD9NzU5KAd
+1. Examine the webhooks that get delivered. 
 
-I have remove all thirdparty library, compact the code and push game simulation in a web worker.
+### Implement it
 
-Work in progress
-
-[building destroy](http://lo-th.github.io/3d.city/test_destruct.html)<br>
-[helicopter test](http://lo-th.github.io/3d.city/test_helicopter.html)<br>
-[low version](http://lo-th.github.io/3d.city/index_low.html)<br>
-
-<a target='_blank' href='http://lo-th.github.io/3d.city/index.html'><img src="http://lo-th.github.io/3d.city/img/preview01.jpg"/></a><br>
-<a target='_blank' href='http://lo-th.github.io/3d.city/index.html'><img src="http://lo-th.github.io/3d.city/img/preview02.jpg"/></a><br>
-<a target='_blank' href='http://lo-th.github.io/3d.city/index.html'><img src="http://lo-th.github.io/3d.city/img/preview03.jpg"/></a><br>
+1. Fork this repository. 
+1. Navigate to the repository Settings > Webhooks > Add a webhook
+1. Generate a new channel by visiting smee.io and click on Start new channel. Copy the URL.
+1. Paste your unique SMEE URL into the Payload URL field.
+1. For Content Type, select `application/json`.
+1. For the events that are sent, select: Send me everything
+1. Add the webhook. GitHub automatically sends a ping. Visit your SMEE url to see it. 
+1. Generate events by taking different actions in your GitHub repository like: opening issues, closing issues, creating branches, creating commits, opening PRs.
